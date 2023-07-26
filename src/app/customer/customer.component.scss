@@ -1,0 +1,421 @@
+.nav-tabs {
+    border-bottom: none !important;
+  }
+  .avtar:not([class*='bg-']) {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .map-container {position: relative; width:100% !important;}
+  .f-34 {
+    font-size: 28px;
+}
+.dashnum-card .round.small {
+  top: -125px;
+  right: -15px;
+  opacity: .5;
+}
+
+.dashnum-card .round {
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+  width: 210px;
+  overflow: hidden;
+  height: 210px;
+  z-index: 1;
+}
+.dashnum-card {
+  position: relative;
+}
+
+.dashnum-card .round.big {
+  top: -85px;
+  right: -95px;
+}
+
+.dashnum-card .round {
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+  width: 210px;
+  overflow: hidden;
+  height: 210px;
+  z-index: 1;
+}
+
+.dashnum-card .card-body {
+  position: relative;
+  z-index: 5;
+}
+
+.dashnum-card .avtar:not([class*=bg-]) {
+  background: rgba(0,0,0,.15);
+}
+
+.overflow-hidden {
+  overflow: hidden!important;
+}
+.dashnum-card .round:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.17);
+}
+.rejectButton{
+  margin-left: 30% !important;
+  margin-top: 5%;
+}
+
+.requestNumber{
+  color: green;
+}
+ 
+.latest-update-card .card-body .latest-update-box {
+  position: relative;
+}
+.p-t-20 {
+  padding-top: 20px;
+}
+.p-b-30 {
+  padding-bottom: 30px;
+}
+.latest-update-card .card-body .latest-update-box .update-meta {
+  z-index: 2;
+}
+.text-end {
+  text-align: right!important;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+p.text-muted {
+  font-size: 13px;
+}
+.m-b-0 {
+  margin-bottom: 0;
+}
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d!important;
+}
+
+.me-2 {
+  margin-right: 0.5rem!important;
+}
+
+.d-inline-flex {
+  display: inline-flex!important;
+}
+
+.latest-update-card .card-body .latest-update-box .update-meta i.update-icon {
+  margin-left: 0px;
+  margin-right: 4px;
+}
+
+.latest-update-card .card-body .latest-update-box .update-meta .update-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 9px 10px;
+  font-size: 16px;
+  color: #fff;
+}
+bg-info {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-info-rgb),var(--bs-bg-opacity))!important;
+}
+
+.feather {
+  font-family: feather!important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-twitter:before {
+  content: "\e8e0";
+}
+.latest-update-card .card-body .latest-update-box:after {
+  content: "";
+  position: absolute;
+  background: #ebebeb;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  left: 82px;
+  z-index: 1;
+}
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: limegreen !important;
+} 
+ 
+.col {
+  flex: 1 0 0%;
+}
+
+.viewallhistoryButton  {
+  margin-left: 26% !important;
+  margin-top: 5%;
+}
+.css-1h77wgb > .MuiGrid-item {
+  padding-left: 24px;
+}
+.css-1h77wgb > .MuiGrid-item {
+  padding-top: 24px;
+}
+
+@media (min-width: 1536px){ 
+.css-4v9257 {
+    flex-basis: 25%;
+    flex-grow: 0;
+    max-width: 100%;
+}
+}
+
+.css-b6w5fa {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgb(103, 58, 183);
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.css-4v9257 {
+  box-sizing: border-box;
+  margin: 0px;
+  flex-direction: row; 
+}
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+.css-18mhetb:last-child {
+  padding-bottom: 24px;
+}
+.css-18mhetb {
+  padding: 24px;
+}
+.css-1x60m27 {
+  margin: 0px;
+  letter-spacing: 0em;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 15px;
+  top: 25px;
+}
+.css-1d3bbye {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.css-1m3k1kp {
+  margin: 0px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: Roboto, sans-serif;
+  line-height: 1.167;
+  color: inherit;
+}
+
+@media (min-width: 1536px)
+{  
+.css-15j76c0 {
+    flex-basis: 100%;
+    flex-grow: 0;
+    max-width: 100%;
+}
+}
+
+.css-1gm1qc1 {
+  margin: 0px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  line-height: 1.57;
+  color: inherit;
+}
+
+.css-1x60m27 > svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.css-6flbmm {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: white;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 2.1875rem;
+}
+
+.css-kok4z1 {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgb(2, 136, 209);
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.css-1rhrxzo {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgb(41, 49, 79);
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.css-72ockd {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgb(244, 67, 54);
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.css-1h77wgb > .MuiGrid-item {
+  padding-left: 24px;
+}
+
+.css-1eql4yf {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgb(103, 58, 183);
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.css-18mhetb:last-child {
+  padding-bottom: 30px;
+}
+.css-18mhetb {
+  padding: 24px;
+}
+
+.css-1v8f2gz {
+  margin: 0px;
+  letter-spacing: 0em;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 13px;
+  top: 14px;
+}
+
+.css-1v8f2gz > svg {
+  width: 85px;
+  height: 80px;
+  opacity: 0.6;
+}
+
+.css-tuxzvu {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: -8px;
+  width: calc(100% + 8px);
+  margin-left: -8px;
+}
+
+.css-tuxzvu > .MuiGrid-item {
+  padding-left: 8px;
+}
+.css-tuxzvu > .MuiGrid-item {
+  padding-top: 8px;
+}
+
+.css-1tih3eg {
+  font-size: 15px; 
+}
+
+.css-1m3k1kp { 
+  font-size: 25px;
+}
+
+.css-1elxhkl {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgb(33, 150, 243);
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.css-wghn2m {
+  letter-spacing: 0em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: rgb(54, 65, 82);
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  text-align: center;
+  padding: 16px;
+  border-top-color: rgb(238, 238, 238);
+  border-right-color: rgb(238, 238, 238);
+  border-left-color: rgb(238, 238, 238);
+  padding-left: 0px;
+  padding-top: 5px; 
+}
+
+.css-1fwwzvr {
+  display: inline-flex;
+  position: relative;
+  font-size: 1.5rem;
+  color: rgb(250, 175, 0);
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: none;
+}
+
+.css-79elbk {
+  position: relative;
+}
+
+.css-13m1if9 {
+  display: flex;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  pointer-events: none;
+}
+
+.css-1cw4hi4 {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: inherit;
+}

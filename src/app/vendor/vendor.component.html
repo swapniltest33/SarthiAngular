@@ -1,0 +1,164 @@
+<div class="row">
+  <div class="col-xl-4 col-md-12">
+    <div class="card dashnum-card dashnum-card-small overflow-hidden">
+      <span class="round bg-warning small"></span>
+      <span class="round bg-warning big"></span>
+      <div class="card-body p-3">
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn btn-primary w-100" *ngIf="!IsShiftStarted" (click)="manageShift()">Start
+            Shift</button>
+          <button type="button" class="btn btn-danger w-100" *ngIf="IsShiftStarted" (click)="manageShift()">End
+            Shift</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" *ngIf="!IsShiftStarted || requestData.currentStageId == 0">
+      <div class="card-body">
+        <div class="row mb-3 align-items-center">
+          <div class="col">
+            <h3>Vendor's Request</h3>
+          </div>
+        </div>
+        <hr />
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item px-0">
+            <div class="row align-items-start">
+              <svg style="color:red" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                class="bi bi-x-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+              <div class="col-sm-6 com-md-12 col-lg-12 mb-2" style="margin-top: 5%;text-align: center;">
+                <span><small style="font-size: 17px;">No request found!</small></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <div class="row align-items-center">
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" (click)="RedirectToHistory()">
+              View All Requests</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="requestData && IsShiftStarted && requestData.currentStageId > 0">
+      <div class="card-body">
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-6 col-sm-6 col-lg-5">
+            <div class="float-left" style="color: #673ab7;">
+              <span><small>REQUEST NUMBER</small></span>
+              <h3>{{requestData.requestNumber}}</h3>
+              <span *ngIf="requestData.currentStageId == 2" class="float-left timer-text">{{ subscribeTimer * 1000 |
+                date:'mm:ss':'UTC' }}</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6 col-lg-7">
+            <button type="button" *ngIf="requestData.currentStageId == 2" class="btn btn-danger float-right me-2 mb-1"
+              (click)="rejectQuotation()">Reject</button>
+            <button type="button" *ngIf="requestData.currentStageId == 2" class="btn btn-success float-right me-2"
+              (click)="accceptQuotation()">Accept</button>
+            <button type="button" *ngIf="requestData.currentStageId == 3" class="btn btn-success float-right me-2"
+              (click)="changeStatus(4)">Reached To Pickup</button>
+            <button type="button" *ngIf="requestData.currentStageId == 4" class="btn btn-success float-right me-2"
+              (click)="changeStatus(5)">Pickup Done</button>
+            <button type="button" *ngIf="requestData.currentStageId == 5" class="btn btn-success float-right me-2"
+              (click)="changeStatus(6)">Reached To Drop Off</button>
+            <button type="button" *ngIf="requestData.currentStageId == 6" class="btn btn-success float-right me-2"
+              (click)="changeStatus(7)">Payment Done</button>
+            <button type="button" *ngIf="requestData.currentStageId == 7" class="btn btn-success float-right me-2"
+              (click)="changeStatus(8)">Completed</button>
+            <button type="button" disabled *ngIf="requestData.currentStageId == 9 || requestData.currentStageId == 10"
+              class="btn btn-default float-right me-2">Quotation
+              Rejected</button>
+          </div>
+        </div>
+        <hr />
+        <div class="row align-items-start">
+          <div class="col-sm-6 com-md-6 col-lg-4 mb-2">
+            <span><small>Customer Name</small></span>
+            <h4>{{requestData.customerFirstName + ' ' + requestData.customerLastName}}</h4>
+          </div>
+          <div class="col-sm-6 com-md-6 col-lg-4 mb-2">
+            <span><small>Contact detail</small></span>
+            <h4>{{requestData.customerContactNo}}</h4>
+          </div>
+          <div class="col-sm-6 com-md-6 col-lg-4 mb-2">
+            <span><small>Distance</small></span>
+            <h4>{{requestData.distanceKM}} KM</h4>
+          </div>
+          <div class="col-sm-6 com-md-6 col-lg-4 mb-2">
+            <span><small>Duration</small></span>
+            <h4>{{requestData.durationInMins}}</h4>
+          </div>
+          <div class="col-sm-6 com-md-6 col-lg-4 mb-2">
+            <span><small>Vehicle Number</small></span>
+            <h4>{{requestData.vehicleNumber}}</h4>
+          </div>
+          <div class="col-sm-6 com-md-6 col-lg-12 mb-2">
+            <span><small>PickUp Location</small></span>
+            <h4>{{requestData.pickUpLocation}}</h4>
+          </div>
+          <div class="col-sm-6 com-md-6 col-lg-12 mb-2">
+            <span><small>Drop Off Location</small></span>
+            <h4>{{requestData.dropOffLocation}}</h4>
+          </div>
+          <hr />
+          <div class="col">
+            <div class="float-left">
+              <h3>Total Amount</h3>
+            </div>
+            <div class="float-right">
+              <h3><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                  class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                  <path
+                    d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                </svg>{{requestData.totalAmount}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-8 col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <app-map-display></app-map-display>
+        <!-- <app-map-display [from]="requestData.pickUpLocation" [to]="requestData.dropOffLocation"></app-map-display> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="card">
+      <div class="card-body">
+        <div class="row mb-3 align-items-center">
+          <div class="col">
+            <h4 class="float-left">Customer's Request</h4>
+            <button type="button" class="btn btn-sm btn-primary float-right">View All</button>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item px-0" *ngFor="let list of ListGroup">
+            <div class="row align-items-start">
+              <div class="col">
+                <h5 class="mb-0">{{ list.name }}</h5>
+                <small class="text-success">{{ list.profit }}</small>
+              </div>
+              <div class="col-auto">
+                <h4 class="mb-0">
+                  {{ list.invest
+                  }}<span class="ms-2 align-top avtar avtar-xxs {{ list.bgColor }}"><i
+                      class="{{ list.icon }} {{ list.color }}"></i></span>
+                </h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div> -->
